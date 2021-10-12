@@ -1,0 +1,18 @@
+Micro-Services: "Loosly coupled service oriented architecture with bounded context"
+
+Why are Microservices Architectures Popular?
+- Desire for faster changes
+- Need for greater availability
+- Motivation for fine-grained scaling
+- Compatible with a DevOps mindset
+
+Core Characteristics fo Microservices
+- Components exposed as services
+- Tied to a specific domain
+- Loosely coupled
+- Built to tolerate failure
+- Delivered continuously via automation
+- Built and run by independent teams
+
+
+
