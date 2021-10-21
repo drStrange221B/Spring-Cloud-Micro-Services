@@ -3,7 +3,7 @@
 # localhost:8888/<anything>/default     both will pick the default, does not search sub directory
 
 server:
-  port: 8888
+  port: 8881
 
 spring:
   cloud:
@@ -31,9 +31,8 @@ spring:
             perf:
               pattern:
                 - "*/perf"        # check the /perf in uri to check alternate repo
-                # localhost:8888/s1rates-perf.json
-                # localhost:8888/s1rates/perf/
-                #
+                                  # localhost:8888/s1rates-perf.json
+                                   # localhost:8888/s1rates/perf/
               uri: https://github.com/drStrange221B/toll-rate-data-perf
               search-paths:
                 - 'station*'
