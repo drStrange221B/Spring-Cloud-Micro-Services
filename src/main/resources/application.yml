@@ -37,7 +37,12 @@ spring:
               search-paths:
                 - 'station*'
 
-
+  security:
+    basic:
+      enabled: true
+    user:
+      name: foo
+      password: foo
 
 
 
