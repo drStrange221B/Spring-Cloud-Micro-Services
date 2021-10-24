@@ -1,0 +1,34 @@
+Encrypting and Decrypting Configurations
+
+- Property values should not be stored in plain text
+- There are two types of Encryption and Decryption a) Symmetric and b) asymmetric
+  - symmetric: share key
+  - asymmetric: share RSA key pair. ths is going to much more secured
+- spring cloud server offers /encrypt adn /decrypt endpoints. assuming these end points are secured
+- alternately, there is an option to chose to decrypt on server or in the client side
+
+how to do?
+Download full-strength JCE
+Add key to bootstrap file ( for symmetric )
+Generate encrypted value and add to properties file
+Retrieve configuration via API
+
+
+test client app with server-side decrypted value
+update server to require client-side decryption
+
+change client to decrypt
+
+Download site:
+https://www.oracle.com/java/technologies/downloads/
+
+
+need to update files
+Location :  /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/jre/lib/security
+sudo cp ~/Documents/demo/JCE/UnlimitedJCEPolicyJDK8/US_export_policy.jar US_export_policy.jar
+sudo cp ~/Documents/demo/JCE/UnlimitedJCEPolicyJDK8/local_policy.jar local_policy.jar
+
+
+
+
+

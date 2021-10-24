@@ -1,13 +1,14 @@
 package com.emrys.springcloud;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringcloudApplicationTests {
+public class SpringcloudApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }

@@ -1,6 +1,13 @@
+
+
+
+
+
 ---
 # use URI: localhost:8888/<anything>/default
 # localhost:8888/<anything>/default     both will pick the default, does not search sub directory
+# for the spring cloud config server to encrypt or decrypt use domain.com/encrypt and domain.com/decrypt with proper credential
+# request body raw and text, body string that need to be encrypt or decrypt
 
 server:
   port: 8881
@@ -13,14 +20,14 @@ spring:
           uri: https://github.com/drStrange221B/toll-rate-data
 
 
-          #          username:
-          #          password:
-          #
-          #          localhost:8888/s1rates/default
-          #          now it will search sub directory under station
-          #          for dev environment localhost:8888/s1rates/dev
-          #          localhost:8888/s2rates-dev.json/  (dev + default in json)  .properties or .yaml for properties or yml
-          #          -- localhost:8888/s2rates-default.json/ ( combine of all file from sub directory default in json )
+#          username:
+#          password:
+#
+#          localhost:8888/s1rates/defaul
+#          now it will search sub directory under station
+#          for dev environment localhost:8888/s1rates/dev
+#          localhost:8888/s2rates-dev.json/  (dev + default in json)  .properties or .yaml for properties or yml
+#          localhost:8888/s2rates-default.json/ ( combine of all file from sub directory default in json )
 
 
           search-paths:
@@ -30,19 +37,21 @@ spring:
           repos:
             perf:
               pattern:
-                - "*/perf"        # check the /perf in uri to check alternate repo
-                                  # localhost:8888/s1rates-perf.json
-                                   # localhost:8888/s1rates/perf/
+                - "*/perf"
+# check the /perf in uri to check alternate repo
+# localhost:8888/s1rates-perf.json
+# localhost:8888/s1rates/perf/
               uri: https://github.com/drStrange221B/toll-rate-data-perf
               search-paths:
                 - 'station*'
 
-  security:
-    basic:
-      enabled: true
-    user:
-      name: foo
-      password: foo
+security:
+  basic:
+    enabled: true
+  user:
+    name: foo
+    password: foo
+
 
 
 
